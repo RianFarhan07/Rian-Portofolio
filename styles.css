@@ -1,0 +1,138 @@
+/* Global Styles */
+body {
+  color: #40514e;
+  margin: 0;
+  font-family: "Merriweather", serif;
+  line-height: 1.6;
+}
+
+/* Gradient Background */
+.gradient-background {
+  background: linear-gradient(300deg, #EEEEEE, #00ADB5, #EEEEEE);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Icon Styles */
+.icon-square {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+.icon-square:hover {
+  transform: scale(1.1);
+}
+
+/* Profile Image */
+.profile-img {
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #00ADB5;
+  box-shadow: 0 0 15px rgba(0, 173, 181, 0.5);
+}
+
+/* About Me Section */
+#about-me .android {
+  color: #a4c639;
+  font-weight: bold;
+}
+
+#about-me .web {
+  color: #00ADB5;
+  font-weight: bold;
+}
+
+/* Contact Me Section */
+.contact-me {
+  color: #00ADB5;
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f8f9fa;
+}
+
+.contact-me h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-me h3 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.contact-me .btn {
+  font-size: 1.2rem;
+  padding: 10px 30px;
+  transition: all 0.3s ease;
+}
+
+.contact-me .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 173, 181, 0.4);
+}
+
+/* Project Section */
+.album p {
+  font-size: 18px;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Skills Section */
+#skill .col {
+  margin-bottom: 30px;
+}
+
+#skill h2 {
+  color: #00ADB5;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+#footer {
+  padding: 30px 0;
+}
+
+#footer .nav-link {
+  color: #40514e;
+  transition: color 0.3s ease;
+}
+
+#footer .nav-link:hover {
+  color: #00ADB5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-img {
+    height: 150px;
+  }
+
+  .contact-me h2 {
+    font-size: 2rem;
+  }
+
+  .contact-me h3 {
+    font-size: 1.2rem;
+  }
+}
+
+.navbar-scrolled {
+  background-color: rgba(33, 37, 41, 0.9) !important;
+  transition: background-color 200ms linear;
+}

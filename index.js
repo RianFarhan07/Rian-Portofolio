@@ -62,21 +62,21 @@ const projectsDatabase = [
     title: "WhatShouldICookToday",
     description: "Web untuk menampilkan recipe random untuk dimasak hari ini",
     category: "web",
-    image: "images/WhatShouldICookToday.png",
+    image: "images/cook.png",
   },
   {
     id: 10,
     title: "BookReview",
     description: "Web untuk mereview buku yang telah dibaca ",
     category: "web",
-    image: "images/BookReview.png",
+    image: "images/book.png",
   },
   {
     id: 11,
     title: "IndonesiaTravelWeb",
     description: "Web untuk menandai kota yang telah dikunjungi di indonesia",
     category: "web",
-    image: "images/IndonesiaTravelWeb.png",
+    image: "images/indonesia.png",
   },
 ];
 

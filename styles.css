@@ -8,15 +8,21 @@ body {
 
 /* Gradient Background */
 .gradient-background {
-  background: linear-gradient(300deg, #EEEEEE, #00ADB5, #EEEEEE);
+  background: linear-gradient(300deg, #eeeeee, #00adb5, #eeeeee);
   background-size: 180% 180%;
   animation: gradient-animation 18s ease infinite;
 }
 
 @keyframes gradient-animation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Icon Styles */
@@ -35,7 +41,7 @@ body {
 .profile-img {
   height: 200px;
   border-radius: 50%;
-  border: 5px solid #00ADB5;
+  border: 5px solid #00adb5;
   box-shadow: 0 0 15px rgba(0, 173, 181, 0.5);
 }
 
@@ -46,13 +52,13 @@ body {
 }
 
 #about-me .web {
-  color: #00ADB5;
+  color: #00adb5;
   font-weight: bold;
 }
 
 /* Contact Me Section */
 .contact-me {
-  color: #00ADB5;
+  color: #00adb5;
   text-align: center;
   padding: 50px 0;
   background-color: #f8f9fa;
@@ -93,13 +99,24 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+.tech-logo-wrapper {
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.tech-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 /* Skills Section */
 #skill .col {
   margin-bottom: 30px;
 }
 
 #skill h2 {
-  color: #00ADB5;
+  color: #00adb5;
   margin-bottom: 15px;
 }
 
@@ -114,7 +131,7 @@ body {
 }
 
 #footer .nav-link:hover {
-  color: #00ADB5;
+  color: #00adb5;
 }
 
 /* Responsive Design */

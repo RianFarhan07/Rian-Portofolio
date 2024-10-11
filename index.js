@@ -6,6 +6,7 @@ const projectsDatabase = [
       "Aplikasi Manajemen Kerja Kelompok Mobile Android menggunakan bahasa Kotlin",
     category: "android",
     image: "images/kelompro.png",
+    techLogos: ["svg/kotlin.svg", "svg/firebase.svg"],
   },
   {
     id: 2,
@@ -13,6 +14,7 @@ const projectsDatabase = [
     description: "Aplikasi Mobile Learning Android di SMAN 4 Jeneponto",
     category: "android",
     image: "images/MobileLearning.png",
+    techLogos: ["svg/kotlin.svg", "svg/firebase.svg"],
   },
   {
     id: 3,
@@ -20,6 +22,7 @@ const projectsDatabase = [
     description: "Aplikasi Pencari dan mengiklankan Kost",
     category: "android",
     image: "images/kostHunt.png",
+    techLogos: ["svg/kotlin.svg", "svg/firebase.svg"],
   },
   {
     id: 4,
@@ -27,6 +30,7 @@ const projectsDatabase = [
     description: "Aplikasi kuis",
     category: "android",
     image: "images/kuisApp.png",
+    techLogos: ["svg/kotlin.svg", "svg/firebase.svg"],
   },
   {
     id: 5,
@@ -34,6 +38,7 @@ const projectsDatabase = [
     description: "Aplikasi Manajemen kerja seperti Trello",
     category: "android",
     image: "images/ProjeManaj.png",
+    techLogos: ["svg/kotlin.svg", "svg/firebase.svg"],
   },
   {
     id: 6,
@@ -42,6 +47,7 @@ const projectsDatabase = [
       "Aplikasi pencatat tamu di dinas ketenagakerjaan kota Makassar",
     category: "android",
     image: "images/buku-tamu-disnaker.png",
+    techLogos: ["svg/kotlin.svg", "svg/firebase.svg"],
   },
   {
     id: 7,
@@ -49,6 +55,7 @@ const projectsDatabase = [
     description: "Aplikasi online marketplace",
     category: "android",
     image: "images/ShopeeKW.png",
+    techLogos: ["svg/kotlin.svg", "svg/firebase.svg"],
   },
   {
     id: 8,
@@ -56,6 +63,7 @@ const projectsDatabase = [
     description: "Website Portofolio",
     category: "web",
     image: "images/ss1.png",
+    techLogos: ["svg/html.svg", "svg/bootstrap.svg", "svg/javascript.svg"],
   },
   {
     id: 9,
@@ -63,6 +71,12 @@ const projectsDatabase = [
     description: "Web untuk menampilkan recipe random untuk dimasak hari ini",
     category: "web",
     image: "images/cook.png",
+    techLogos: [
+      "svg/html.svg",
+      "svg/css1.svg",
+      "svg/javascript.svg",
+      "svg/express-js.svg",
+    ],
   },
   {
     id: 10,
@@ -70,6 +84,13 @@ const projectsDatabase = [
     description: "Web untuk mereview buku yang telah dibaca ",
     category: "web",
     image: "images/book.png",
+    techLogos: [
+      "svg/html.svg",
+      "svg/css.svg",
+      "svg/javascript.svg",
+      "svg/express-js.svg",
+      "svg/node-js.svg",
+    ],
   },
   {
     id: 11,
@@ -77,6 +98,13 @@ const projectsDatabase = [
     description: "Web untuk menandai kota yang telah dikunjungi di indonesia",
     category: "web",
     image: "images/indonesia.png",
+    techLogos: [
+      "svg/html.svg",
+      "svg/css1.svg",
+      "svg/javascript.svg",
+      "svg/express-js.svg",
+      "svg/node-js.svg",
+    ],
   },
 ];
 
@@ -117,36 +145,6 @@ window.addEventListener("load", typeWriter);
 
 // Project filter
 
-function animateSkills() {
-  skillBars.forEach((bar) => {
-    const target = bar.getAttribute("data-progress");
-    let width = 0;
-    const interval = setInterval(() => {
-      if (width >= target) {
-        clearInterval(interval);
-      } else {
-        width++;
-        bar.style.width = width + "%";
-        bar.textContent = width + "%";
-      }
-    }, 10);
-  });
-}
-
-// Trigger skill animation when the skills section is in view
-const skillsSection = document.querySelector("#skill");
-const observer = new IntersectionObserver(
-  (entries) => {
-    if (entries[0].isIntersecting) {
-      animateSkills();
-      observer.unobserve(skillsSection);
-    }
-  },
-  { threshold: 0.5 }
-);
-
-observer.observe(skillsSection);
-
 function handleScroll() {
   const navbar = document.querySelector(".navbar");
   const scrollOffset = 50; // Sesuaikan nilai ini jika perlu
@@ -177,20 +175,43 @@ function handleScroll() {
 }
 
 function createProjectElement(project) {
+  const techLogos = (project.techLogos || [])
+    .map((logo, index) => {
+      let logoHtml = "";
+      if (logo.endsWith(".svg")) {
+        // For SVG files
+        logoHtml = `<img src="${logo}" alt="Technology ${
+          index + 1
+        }" class="tech-logo me-1" style="width: 36px; height: 36px;">`;
+      } else if (logo.startsWith("images/")) {
+        // For image logos
+        logoHtml = `<img src="${logo}" alt="Technology ${
+          index + 1
+        }" class="tech-logo me-1" style="width: 36px; height: 36px;">`;
+      } else {
+        // For inline SVG logos (if any)
+        logoHtml = `<svg class="tech-logo me-1" width="36" height="36"><use xlink:href="#${logo}-logo"/></svg>`;
+      }
+      return `<div class="tech-logo-wrapper">${logoHtml}</div>`;
+    })
+    .join("");
+
   return `
-        <div class="col project-item" data-category="${project.category}">
-            <div class="card h-100 shadow-sm project-card">
-                <img src="${project.image}" class="card-img-top" alt="${project.title}" height="200" style="object-fit: cover;">
-                <div class="card-body">
-                    <h5 class="card-title">${project.title}</h5>
-                    <p class="card-text">${project.description}</p>
-                </div>
-                <div class="card-footer bg-transparent border-top-0">
-                    <button type="button" class="btn btn-sm btn-outline-primary">View Details</button>
+    <div class="col project-item" data-category="${project.category}">
+        <div class="card h-100 shadow-sm project-card">
+            <img src="${project.image}" class="card-img-top" alt="${project.title}" height="200" style="object-fit: cover;">
+            <div class="card-body">
+                <h5 class="card-title">${project.title}</h5>
+                <p class="card-text">${project.description}</p>
+            </div>
+            <div class="card-footer bg-transparent border-top-0 d-flex justify-content-center align-items-center pb-3">
+                <div class="tech-logos d-flex flex-wrap justify-content-center">
+                    ${techLogos}
                 </div>
             </div>
         </div>
-    `;
+    </div>
+  `;
 }
 
 // Fungsi untuk merender proyek

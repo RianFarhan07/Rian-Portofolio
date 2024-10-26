@@ -106,6 +106,24 @@ const projectsDatabase = [
       "svg/node-js.svg",
     ],
   },
+  {
+    id: 12,
+    title: "RylixHub App",
+    description:
+      "Aplikasi untuk mengunggah foto dan video tempat-tempat indah di seluruh dunia",
+    category: "android",
+    image: "images/RylixHub.png",
+    techLogos: ["svg/kotlin.svg", "svg/firebase.svg"],
+  },
+  {
+    id: 12,
+    title: "Ngobrol App",
+    description: "Aplikasi untuk ngobrol bersama orang baru",
+    category: "android",
+    image: "images/ngobrolApp.png",
+
+    techLogos: ["svg/kotlin.svg", "svg/firebase.svg"],
+  },
 ];
 
 // Smooth scrolling for navigation links

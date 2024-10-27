@@ -4,20 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rian Portfolio</title>
+    <link rel="stylesheet" href="style2.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#">Rian Portfolio</a>
         <button
@@ -51,116 +57,186 @@
       </div>
     </nav>
 
-    <section id="Home" class="gradient-background">
-      <div class="container col-xxl-8 px-4 py-5">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-          <div class="col-10 col-sm-8 col-lg-6">
+    <section id="Home" class="position-relative">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="hero-content">
+              <h1 class="hero-title">Welcome To<br />Rian's Portfolio</h1>
+              <p class="typed-text-wrapper">
+                <span class="hero-subtitle" id="typed-text"></span>
+              </p>
+              <div class="d-flex gap-3">
+                <a href="#about-me" class="modern-btn primary">Learn More</a>
+                <a href="#contact-me" class="modern-btn secondary">Contact Me</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
             <img
               src="images/portofolio.jpg"
-              class="d-block mx-lg-auto img-fluid rounded-circle"
+              class="img-hero img-fluid hero-image floating"
               alt="Portfolio"
-              width="700"
-              height="400"
-              loading="lazy"
             />
           </div>
-          <div class="col-lg-6">
-            <h2 class="display-5 fw-bold lh-1 mb-3">Welcome To</h2>
-            <h1 class="display-2 fw-bold lh-1 mb-3">Rian's Portfolio</h1>
-            <p class="lead"></p>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-              <a href="#about-me" class="btn btn-primary btn-lg px-4 me-md-2"
-                >Learn More</a
-              >
-              <a
-                href="#contact-me"
-                class="btn btn-outline-secondary btn-lg px-4"
-                >Contact Me</a
-              >
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
-    <section id="about-me">
-      <div class="p-5 text-center bg-body-tertiary">
-        <div class="container py-5">
-          <h2 class="text-body-emphasis">
-            "I am an <span class="android">Android</span> and
-            <span class="web">Web</span> Developer"
-          </h2>
-          <img class="profile-img mt-3 mb-3" src="images/foto.JPG" alt="foto" />
-          <p class="col-lg-12 mx-auto lead">
-            Baso Rian Farhan Mallanti. Lahir di Makassar, Sulawesi Selatan pada
-            tanggal 7 Juli 2002 merupakan anak pertama dari pasangan bapak Baso
-            Syamsuridsal dan Ibu Hasdiani yang menamatkan pendidikan di Taman
-            Kanak-Kanak Tunas Dharma pada tahun 2008, kemudian menamatkan
-            pendidikan di SD Negeri 1 Terawan pada tahun 2014, lalu kemudian
-            pendidikan menengah pertama di SMP Tunas Agro pada tahun 2017 dan
-            pendidikan menengah atas di SMA Negeri 2 Barru pada tahun 2020.
-            Setelah itu melanjutkan pendidikan tinggi di Universitas Negeri
-            Makassar di Fakultas Teknik mengambil Jurusan Teknik Informatika dan
-            Komputer pada Program Studi Pendidikan Teknik Informatika dan
-            Komputer tingkat Strata 1 (S1).
-          </p>
-          <div class="row mt-3">
-            <div class="col-lg-3 col-sm-6">
-              <img
-                src="images/sd-1-terawan.png"
-                alt="sd-1-terawan"
-                height="100"
-              />
-            </div>
-            <div class="col-lg-3 col-sm-6">
-              <img
-                src="images/smp-tunas-agro.png"
-                alt="mashable"
-                height="100"
-              />
-            </div>
-            <div class="col-lg-3 col-sm-6">
-              <img src="images/sma-2-barru.png" alt="bizinsider" height="100" />
-            </div>
-            <div class="col-lg-3 col-sm-6">
-              <img src="images/unm-logo.png" alt="tnw" height="100" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="project" class="py-3 bg-light">
+    <section id="about-me" class="py-6">
       <div class="container">
-        <h2 class="text-center mb-5">My Projects</h2>
-
-        <div class="mb-4 text-center">
-          <button
-            class="btn btn-outline-primary filter-btn me-2 active"
-            data-filter="all"
-          >
-            All
-          </button>
-          <button
-            class="btn btn-outline-primary filter-btn me-2"
-            data-filter="android"
-          >
-            Android
-          </button>
-          <button class="btn btn-outline-primary filter-btn" data-filter="web">
-            Web
-          </button>
-        </div>
-
-        <div
-          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 justify-content-center"
-        >
-          <!-- Project items will be dynamically inserted here -->
-        </div>
+          <div class="row justify-content-center mb-5">
+              <div class="col-lg-8 text-center">
+                  <h6 class="text-primary fw-bold text-uppercase mb-3" data-aos="fade-up">About Me</h6>
+                  <h2 class="display-5 fw-bold mb-4" data-aos="fade-up" data-aos-delay="100">
+                      Turning Ideas into Digital Reality
+                  </h2>
+              </div>
+          </div>
+  
+          <div class="row align-items-center">
+              <div class="col-lg-5" data-aos="fade-right">
+                  <div class="position-relative">
+                      <img src="images/foto.JPG" alt="Profile" class="img-fluid rounded-3 shadow-lg">
+                      <div class="experience-badge">
+                          <span class="h2 fw-bold">2+</span>
+                          <span class="text-uppercase">Years of Experience</span>
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="col-lg-7 ps-lg-5 mt-5 mt-lg-0" data-aos="fade-left">
+                  <div class="row g-4">
+                      <!-- Experience Card -->
+                      <div class="col-md-6">
+                          <div class="feature-card p-4 rounded-3 shadow-sm">
+                              <div class="icon-box mb-3">
+                                  <i class="fas fa-mobile-alt text-primary"></i>
+                              </div>
+                              <h4 class="fw-bold mb-2">Mobile Development</h4>
+                              <p class="text-muted mb-0">Specialized in Android development using Kotlin and modern architecture patterns</p>
+                          </div>
+                      </div>
+  
+                      <!-- Web Dev Card -->
+                      <div class="col-md-6">
+                          <div class="feature-card p-4 rounded-3 shadow-sm">
+                              <div class="icon-box mb-3">
+                                  <i class="fas fa-code text-primary"></i>
+                              </div>
+                              <h4 class="fw-bold mb-2">Web Development</h4>
+                              <p class="text-muted mb-0">Creating responsive and modern web applications using latest technologies</p>
+                          </div>
+                      </div>
+  
+                      <!-- Education Card -->
+                      <div class="col-12">
+                          <div class="education-timeline mt-4">
+                              <h4 class="fw-bold mb-4">Educational Journey</h4>
+                              <div class="timeline-item">
+                                  <span class="year">2020 - Present</span>
+                                  <h5>Universitas Negeri Makassar</h5>
+                                  <p>Jurusan Teknik Informatika dan Komputer</p>
+                              </div>
+                              <div class="timeline-item">
+                                  <span class="year">2017 - 2020</span>
+                                  <h5>SMA Negeri 2 Barru</h5>
+                              </div>
+                              <div class="timeline-item">
+                                  <span class="year">2014 - 2017</span>
+                                  <h5>SMP Tunas Agro</h5>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Skills Section -->
+          <div class="row mt-6">
+              <div class="col-12 text-center mb-4">
+                  <h3 class="fw-bold">Technical Skills</h3>
+              </div>
+              <div class="col-lg-6" data-aos="fade-right">
+                  <div class="skill-item mb-4">
+                      <div class="d-flex justify-content-between mb-1">
+                          <span class="fw-bold">Kotlin Android Development</span>
+                          <span>90%</span>
+                      </div>
+                      <div class="progress" style="height: 8px;">
+                          <div class="progress-bar" role="progressbar" style="width: 90%"></div>
+                      </div>
+                  </div>
+                  <div class="skill-item mb-4">
+                      <div class="d-flex justify-content-between mb-1">
+                          <span class="fw-bold">Firebase</span>
+                          <span>85%</span>
+                      </div>
+                      <div class="progress" style="height: 8px;">
+                          <div class="progress-bar" role="progressbar" style="width: 85%"></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-6" data-aos="fade-left">
+                  <div class="skill-item mb-4">
+                      <div class="d-flex justify-content-between mb-1">
+                          <span class="fw-bold">HTML/CSS/JavaScript</span>
+                          <span>85%</span>
+                      </div>
+                      <div class="progress" style="height: 8px;">
+                          <div class="progress-bar" role="progressbar" style="width: 85%"></div>
+                      </div>
+                  </div>
+                  <div class="skill-item mb-4">
+                      <div class="d-flex justify-content-between mb-1">
+                          <span class="fw-bold">Node.js & Express</span>
+                          <span>80%</span>
+                      </div>
+                      <div class="progress" style="height: 8px;">
+                          <div class="progress-bar" role="progressbar" style="width: 80%"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
-    </section>
+  </section>
 
-    <section id="Certificates" class="py-5">
+  <section id="project" class="py-6 bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+                <h6 class="text-primary fw-bold text-uppercase mb-3" data-aos="fade-up">My Projects</h6>
+                <h2 class="display-5 fw-bold mb-4" data-aos="fade-up" data-aos-delay="100">
+                    Featured Works
+                </h2>
+            </div>
+        </div>
+
+        <!-- Project Filters -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+                <div class="filter-buttons" data-aos="fade-up" data-aos-delay="200">
+                    <button class="btn btn-outline-primary filter-btn active me-2 mb-2" data-filter="all">
+                        All Projects
+                    </button>
+                    <button class="btn btn-outline-primary filter-btn me-2 mb-2" data-filter="android">
+                        Android Apps
+                    </button>
+                    <button class="btn btn-outline-primary filter-btn mb-2" data-filter="web">
+                        Web Projects
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Grid -->
+        <div class="row g-4" id="project-grid">
+            <!-- Project items will be dynamically inserted here -->
+        </div>
+    </div>
+</section>
+
+    <section id="Certificates" data-aos="fade-up">
       <div class="container">
         <h2 class="text-center mb-5">My Certificates</h2>
         <div class="row g-4 py-5 justify-content-center">
@@ -228,7 +304,7 @@
       </div>
     </section>
 
-    <section id="contact-me" class="py-5 bg-light">
+    <section id="contact-me" data-aos="fade-up">
       <div class="container text-center">
         <h2 class="mb-4">Get In Touch</h2>
         <p class="lead mb-5">If you're interested in my work, let's connect!</p>
@@ -281,11 +357,12 @@
       </div>
     </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="index.js"></script>
+
+</body>
+</html>
   </body>
 </html>

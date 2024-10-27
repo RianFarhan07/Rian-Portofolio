@@ -186,42 +186,83 @@ body {
 }
 
 .project-card:hover,
-.certificate-card:hover,
+.sertificate-card:hover,
 .feature-card:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--hover-shadow);
+  transform: translateY(-10px) !important;
+  box-shadow: var(--hover-shadow) !important;
 }
 
-.feature-card {
+.feature-card,
+.project-card,
+.sertificate-card {
   background: var(--card-bg) !important;
   color: var(--primary-color);
   cursor: pointer;
 }
 
-.feature-card .text-muted {
+.feature-card .text-muted,
+.project-card .text-muted {
   color: #ffffff !important;
 }
 
 /* Project Section */
 .filter-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  padding: 1rem !important;
 }
 
 .filter-btn {
-  border-radius: 25px;
-  padding: 0.5rem 1.5rem;
-  transition: all 0.3s ease;
-  color: var(--text-color);
-  border-color: var(--primary-color);
+  padding: 12px 24px !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  border-radius: 8px !important;
+  border: 2px solid var(--primary-color) !important;
+  background: transparent !important;
+  color: var(--primary-color) !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+  z-index: 1 !important;
+  cursor: pointer !important;
 }
 
-.filter-btn:hover,
+.filter-btn:before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+  transition: all 0.4s ease !important;
+  z-index: -1 !important;
+}
+
+.filter-btn:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 5px 15px var(--primary-color) !important;
+  background: var(--text-color) !important;
+  color: var(--primary-color) !important;
+  border-color: var(--text-color) !important;
+}
+
+.filter-btn:hover:before {
+  left: 100% !important;
+}
+
 .filter-btn.active {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
+  background: var(--primary-color) !important;
+  color: white !important;
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 5px 15px var(--primary-color) !important;
+}
+
+.filter-btn.active:hover {
+  background: var(--primary-color) !important;
+  transform: translateY(-3px) !important;
 }
 
 .project-card .card-img-wrapper {
@@ -316,6 +357,17 @@ body {
   margin-bottom: 0.5rem;
 }
 
+/* Certificate */
+
+.sertificate-card .card-img-top {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-potrait {
+  height: 200px;
+}
+
 /* Skills */
 .progress {
   background-color: rgba(255, 255, 255, 0.1);
@@ -355,14 +407,80 @@ body {
   color: var(--text-color);
 }
 
-.social-icon {
-  color: var(--text-color);
+.navbar-brand {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #ffffff;
+}
+
+.navbar-brand:hover:after {
+  width: 100%;
+}
+
+.back-to-top {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 20px;
   transition: all 0.3s ease;
 }
 
-.social-icon:hover {
-  color: var(--primary-color);
+.back-to-top:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  color: #000 !important;
+}
+
+.back-to-top i {
+  transition: transform 0.3s ease;
+}
+
+.back-to-top:hover i {
+  transform: translateY(-2px);
+}
+
+.social-link {
+  display: inline-block;
+  color: #212529;
+  margin: 0 8px;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
   transform: translateY(-5px);
+}
+
+.social-link .fa-linkedin:hover {
+  color: #0077b5;
+}
+
+.social-link .fa-whatsapp:hover {
+  color: #25d366;
+}
+
+.social-link .fa-instagram:hover {
+  color: #e4405f;
+}
+
+.social-link .fa-envelope:hover {
+  color: #ea4335;
+}
+.gradient-background {
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
 }
 
 /* Animations */

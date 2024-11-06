@@ -10,14 +10,19 @@
 
 /* Global Styles */
 html {
+  max-width: 100%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
+  position: relative;
   scroll-padding-top: 80px;
 }
 
 body {
+  max-width: 100%;
   font-family: "Poppins", sans-serif;
   color: var(--text-color);
   overflow-x: hidden;
+  position: relative;
   background: rgba(34, 40, 49, 0.95) !important;
 }
 
@@ -344,6 +349,9 @@ body {
   justify-content: center;
   align-items: center;
 }
+.project-dialog .close-btn {
+  right: 10px;
+}
 
 .close-btn {
   position: absolute;
@@ -612,13 +620,54 @@ body {
   }
 
   .experience-badge {
-    right: 0;
-    bottom: -40px;
-    padding: 1rem;
+    right: 10px;
+    bottom: -30px;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .col-lg-6,
+  .col-md-6,
+  .col-sm-12 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Pastikan gambar responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .card {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .d-flex.gap-3 {
+    flex-wrap: wrap;
+  }
+
+  /* Adjust padding for sections */
+  section {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .dialog-content {
-    width: 95%;
+    width: 100%;
     padding: 15px;
   }
 

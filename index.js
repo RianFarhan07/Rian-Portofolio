@@ -283,8 +283,12 @@ const projectsDatabase = [
 
 // Project Functions
 function createProjectElement(project) {
+  const flipDirection = project.id % 2 === 0 ? "right" : "left";
+
   return `
-    <div class="col-md-6 col-lg-4 project-item" data-aos="fade-up">
+    <div class="col-md-6 col-lg-4 project-item" data-aos="flip-${flipDirection}"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
       <div class="card project-card h-100" data-project='${JSON.stringify(
         project
       )}'>

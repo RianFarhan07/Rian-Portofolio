@@ -324,18 +324,20 @@ body {
 
 /* Project Dialog */
 .project-dialog {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 1000;
 }
 
 .dialog-content {
-  position: relative;
+  position: fixed;
   width: 100%;
   height: 100%;
   display: flex;
@@ -345,14 +347,19 @@ body {
 
 .close-btn {
   position: absolute;
-  top: 20px;
-  right: 30px;
+  top: 70px;
+  right: 220px;
   font-size: 30px;
-  color: white;
-  background: none;
+  color: black;
+  background: white;
   border: none;
   cursor: pointer;
   z-index: 1001;
+}
+
+.close-btn:hover {
+  background: red;
+  color: white;
 }
 
 .slider-container {
@@ -394,6 +401,10 @@ body {
   cursor: pointer;
   font-size: 20px;
   z-index: 1001;
+}
+
+.nav-btn:hover {
+  background: var(--primary-color);
 }
 
 .prev-btn {
@@ -588,6 +599,10 @@ body {
     font-size: 2.5rem;
   }
 
+  .img-hero {
+    margin-top: 50px;
+  }
+
   .hero-subtitle {
     font-size: 1.2rem;
   }
@@ -600,5 +615,26 @@ body {
     right: 0;
     bottom: -40px;
     padding: 1rem;
+  }
+
+  .dialog-content {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .image-slider {
+    height: 300px;
+  }
+
+  .nav-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  [data-aos] {
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 }

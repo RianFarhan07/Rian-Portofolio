@@ -506,6 +506,49 @@ document.addEventListener("DOMContentLoaded", function () {
       dialog.style.display = "none";
     }
   });
+  gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.refresh();
+
+  gsap.from(".experience-badge", {
+    scrollTrigger: {
+      trigger: ".experience-badge",
+    },
+    x: 500,
+    ease: "bounce",
+    duration: 2,
+  });
+
+  gsap.from(".year", {
+    scrollTrigger: {
+      trigger: ".year",
+    },
+    opacity: 0,
+    duration: 2,
+  });
+
+  gsap.from(".navbar", {
+    y: "-100%",
+    opacity: 0,
+    duration: 1.5,
+  });
+
+  gsap.from(".skill-left", {
+    scrollTrigger: {
+      trigger: ".skill-left",
+    },
+    x: -500,
+    ease: "bounce",
+    duration: 2,
+  });
+
+  gsap.from(".skill-right", {
+    scrollTrigger: {
+      trigger: ".skill-right",
+    },
+    x: 500,
+    ease: "bounce",
+    duration: 2,
+  });
 
   renderProjects(projectsDatabase);
   initializeFilter();

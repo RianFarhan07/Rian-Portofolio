@@ -109,11 +109,13 @@
         <div class="row align-items-center">
           <div class="col-lg-5 foto" data-aos="fade-right">
             <div class="position-relative">
-              <img
-                src="images/foto-nobg.png"
-                alt="Profile"
-                class="img-fluid rounded-3 shadow-lg"
-              />
+              <div class="foto-box">
+                <img
+                  src="images/foto-nobg.png"
+                  alt="Profile"
+                  class="img-profile img-fluid rounded-3 shadow-lg"
+                />
+              </div>
               <div class="experience-badge">
                 <span class="h2 fw-bold">3+</span>
                 <span class="text-uppercase">Years of Experience</span>
@@ -461,6 +463,14 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
     <script src="index.js"></script>
+
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelector(".foto-box"), {
+        max: 25,
+        speed: 400,
+      });
+    </script>
   </body>
 </html>

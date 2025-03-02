@@ -4,7 +4,7 @@ const projectsDatabase = [
     id: 1,
     title: "Kelompro App",
     description:
-      "Aplikasi Manajemen Kerja Kelompok Mobile Android menggunakan bahasa Kotlin",
+      "Aplikasi manajemen kerja kelompok berbasis Android yang dirancang untuk mempermudah kolaborasi tim dalam proyek akademik dan profesional. Menggunakan Kotlin dan Firebase untuk real-time collaboration, fitur chat, pengingat tugas, serta sistem pembagian tugas otomatis.",
     category: "android",
     image: "images/kelompro.png",
     images: [
@@ -41,7 +41,8 @@ const projectsDatabase = [
   {
     id: 2,
     title: "Mobile Learning",
-    description: "Aplikasi Mobile Learning Android di SMAN 4 Jeneponto",
+    description:
+      "Aplikasi pembelajaran berbasis mobile yang dikembangkan untuk SMAN 4 Jeneponto. Memiliki fitur materi interaktif, kuis adaptif, dan sistem manajemen kelas berbasis cloud dengan Firebase untuk memfasilitasi pengalaman belajar digital yang lebih fleksibel dan efektif.",
     category: "android",
     image: "images/MobileLearning.png",
     images: [
@@ -88,7 +89,8 @@ const projectsDatabase = [
   {
     id: 3,
     title: "Kost Hunt",
-    description: "Aplikasi Pencari dan mengiklankan Kost",
+    description:
+      "Platform pencarian dan pemasangan iklan kost berbasis Android dengan fitur pencarian lokasi berbasis GPS, sistem filter cerdas berdasarkan harga, fasilitas, dan tipe kamar.",
     category: "android",
     image: "images/kostHunt.png",
     images: [
@@ -110,7 +112,8 @@ const projectsDatabase = [
   {
     id: 4,
     title: "Quiz App",
-    description: "Aplikasi kuis",
+    description:
+      "Aplikasi kuis edukatif berbasis Android yang dirancang untuk membantu pengguna belajar dengan cara yang menyenangkan. Memiliki fitur pertanyaan adaptif berdasarkan tingkat kesulitan, leaderboard global, serta integrasi dengan Firebase untuk penyimpanan data pengguna.",
     category: "android",
     image: "images/kuisApp.png",
     images: [
@@ -125,7 +128,8 @@ const projectsDatabase = [
   {
     id: 5,
     title: "ProjeManaj",
-    description: "Aplikasi Manajemen kerja seperti Trello",
+    description:
+      "Aplikasi manajemen proyek yang terinspirasi dari Trello, dirancang untuk membantu tim dalam mengorganisir tugas dan kolaborasi proyek dengan lebih efisien. reminder otomatis, serta notifikasi real-time berbasis Firebase.",
     category: "android",
     image: "images/ProjeManaj.png",
     images: [
@@ -151,7 +155,7 @@ const projectsDatabase = [
     id: 6,
     title: "Buku Tamu Disnaker",
     description:
-      "Aplikasi pencatat tamu di dinas ketenagakerjaan kota Makassar",
+      "Aplikasi pencatatan tamu digital untuk Dinas Ketenagakerjaan Kota Makassar yang menggantikan sistem buku tamu manual dengan teknologi digital. dan penyimpanan data cloud untuk analisis kehadiran.",
     category: "android",
     image: "images/buku-tamu-disnaker.png",
     images: [
@@ -165,7 +169,8 @@ const projectsDatabase = [
   {
     id: 7,
     title: "ShopeeKWApp",
-    description: "Aplikasi online marketplace",
+    description:
+      "Marketplace online berbasis Android yang mengadopsi konsep e-commerce seperti Shopee, dengan fitur katalog produk, sistem checkout, metode pembayaran digital, serta integrasi Firebase untuk sistem login dan database pengguna.",
     category: "android",
     image: "images/ShopeeKW.png",
     images: [
@@ -190,7 +195,8 @@ const projectsDatabase = [
   {
     id: 8,
     title: "PortoRian",
-    description: "Website Portofolio",
+    description:
+      "Website portofolio interaktif yang menampilkan proyek-proyek pengembangan software, dibangun dengan HTML, Bootstrap, dan JavaScript untuk tampilan responsif dan navigasi yang intuitif.",
     category: "web",
     image: "images/ss1.png",
     techLogos: ["svg/html.svg", "svg/bootstrap.svg", "svg/javascript.svg"],
@@ -198,7 +204,8 @@ const projectsDatabase = [
   {
     id: 9,
     title: "WhatShouldICookToday",
-    description: "Web untuk menampilkan recipe random untuk dimasak hari ini",
+    description:
+      "Website rekomendasi resep masakan berdasarkan bahan yang tersedia di dapur pengguna. Menggunakan API eksternal untuk menampilkan resep acak setiap harinya, serta backend berbasis Express.js untuk mengelola pencarian dan rekomendasi.",
     category: "web",
     image: "images/cook.png",
     techLogos: [
@@ -207,11 +214,13 @@ const projectsDatabase = [
       "svg/javascript.svg",
       "svg/express-js.svg",
     ],
+    github: "https://github.com/rian-surya/WhatShouldICookToday",
   },
   {
     id: 10,
     title: "BookReview",
-    description: "Web untuk mereview buku yang telah dibaca",
+    description:
+      "Platform review buku berbasis web yang memungkinkan pengguna untuk memberikan rating dan ulasan terhadap buku yang telah dibaca. Memiliki sistem pencarian berbasis Open Library API.",
     category: "web",
     image: "images/book.png",
     techLogos: [
@@ -225,7 +234,8 @@ const projectsDatabase = [
   {
     id: 11,
     title: "IndonesiaTravelWeb",
-    description: "Web untuk menandai kota yang telah dikunjungi di indonesia",
+    description:
+      "Website interaktif untuk menandai kota-kota yang telah dikunjungi di Indonesia. Menggunakan peta dinamis , serta fitur rekomendasi destinasi berdasarkan preferensi pengguna.",
     category: "web",
     image: "images/indonesia.png",
     techLogos: [
@@ -240,7 +250,7 @@ const projectsDatabase = [
     id: 12,
     title: "RylixHub App",
     description:
-      "Aplikasi untuk mengunggah foto dan video tempat-tempat indah di seluruh dunia",
+      "Aplikasi berbagi foto dan video tempat-tempat indah di seluruh dunia. penyimpanan cloud menggunakan Firebase Storage.",
     category: "android",
     image: "images/RylixHub.png",
     images: [
@@ -263,7 +273,8 @@ const projectsDatabase = [
   {
     id: 13,
     title: "Ngobrol App",
-    description: "Aplikasi untuk ngobrol bersama orang baru",
+    description:
+      "Aplikasi chatting real-time yang memungkinkan pengguna berinteraksi dengan orang baru. Menggunakan Firebase Firestore untuk sistem pesan instan.",
     category: "android",
     image: "images/ngobrolApp.png",
     images: [
@@ -278,6 +289,42 @@ const projectsDatabase = [
       "images/NgobrolApp/8.png",
     ],
     techLogos: ["svg/kotlin.svg", "svg/firebase.svg"],
+  },
+  {
+    id: 14,
+    title: "KostHunt",
+    description:
+      "KostHunt adalah platform pencarian kost yang memudahkan pengguna menemukan tempat tinggal sesuai kebutuhan mereka. Dilengkapi dengan fitur pencarian berbasis lokasi, filter harga dan fasilitas, sistem ulasan pengguna, serta metode pembayaran online melalui Midtrans.",
+    category: "web",
+    image: "images/kostHuntMern.png",
+    link: "https://kost-hunt.vercel.app/",
+    techLogos: [
+      "https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png",
+      "svg/node-js.svg",
+      "https://img.icons8.com/color/48/mongo-db.png",
+      "svg/javascript.svg",
+      "svg/midtrans_logo_white.svg",
+      "https://img.icons8.com/color/48/redux.png",
+      "https://img.icons8.com/color/48/tailwindcss.png",
+      "https://img.icons8.com/dusk/64/xls.png",
+    ],
+  },
+  {
+    id: 15,
+    title: "Rylix Estate",
+    description:
+      "Rylix Estate adalah platform pencarian properti berbasis MERN Stack yang memungkinkan pengguna mencari, menyimpan, dan membeli properti dengan mudah. Dilengkapi dengan fitur autentikasi, filter pencarian, manajemen properti, serta pembayaran online melalui Midtrans.",
+    category: "web",
+    image: "images/RylixEstate.png",
+    link: "https://real-estate-mern-sandy.vercel.app/",
+    techLogos: [
+      "https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png",
+      "svg/node-js.svg",
+      "https://img.icons8.com/color/48/mongo-db.png",
+      "svg/javascript.svg",
+      "https://img.icons8.com/color/48/redux.png",
+      "https://img.icons8.com/color/48/tailwindcss.png",
+    ],
   },
 ];
 
@@ -328,10 +375,13 @@ function showProjectDialog(project) {
   const sliderTrack = dialog.querySelector(".slider-track");
 
   // Reset slider
-  let currentImageIndex = 0;
+  currentImageIndex = 0;
   sliderTrack.innerHTML = "";
 
-  // Tambahkan semua gambar project ke slider
+  if (project.link) {
+    window.open(project.link, "_blank");
+    return;
+  }
   if (!project.images || project.images.length === 0) {
     alert("Project ini tidak memiliki gambar.");
     return;
@@ -491,6 +541,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (projectCard) {
       const projectData = JSON.parse(projectCard.dataset.project);
       showProjectDialog(projectData);
+    } else {
     }
   });
 

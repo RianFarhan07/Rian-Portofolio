@@ -313,6 +313,58 @@ body {
   height: 24px;
 }
 
+.foto-box {
+  transform-style: preserve-3d;
+}
+
+.foto-box::before {
+  content: "RIAN";
+  position: absolute;
+  font-size: 5em;
+  font-weight: 700;
+  color: white;
+  left: -70px;
+  transition: 0.5s;
+  font-style: italic;
+  opacity: 0;
+}
+
+.foto-box::after {
+  content: "FARHAN";
+  position: absolute;
+  font-size: 5em;
+  font-weight: 700;
+  color: white;
+  left: -70px;
+  transition: 0.5s;
+  font-style: italic;
+  left: 50%;
+  top: 430px;
+  opacity: 0;
+}
+
+.foto-box:hover::before {
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+
+.foto-box:hover::after {
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+
+.foto:hover .experience-badge {
+  box-shadow: 0 5px 15px var(--primary-color);
+  color: var(--primary-color);
+  background: var(--text-color);
+}
+
+.img-profile {
+  object-fit: cover;
+}
+
 /* Experience Badge */
 .experience-badge {
   position: absolute;
